@@ -71,8 +71,8 @@ example4();
 function example5() {
     for (let num = 1; num <= 100; num++) {
         let output = '';
-        if(num % 3 == 0) output += 'Fizz';
-        if(num % 5 == 0) output += 'Buzz';
+        if(num % 3 === 0) output += 'Fizz';
+        if(num % 5 === 0) output += 'Buzz';
         console.log('example5:', output || num);
     }
 }
@@ -93,7 +93,7 @@ function example6() {
             if ((x + y) % 2 == 0) {
                 board += ' ';
             } else {
-                board += '#';
+                board += (1 + 2) % 2 === 0 ? ' ' : '#';
             }
         }
         board += '\n';
