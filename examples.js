@@ -101,3 +101,49 @@ function example6() {
     console.log(board);
 }
 example6();
+
+
+/* 
+Создайте непустой массив и получите сумму его первого и 
+последнего элементов.
+ */
+function example7() {
+    const arr = [1, 2, 3, 4, 5, 6, 7];
+    let sumOfFirstAndLast = arr[0] + arr[arr.length - 1]; 
+    console.log(sumOfFirstAndLast);
+}
+example7();
+
+
+/* 
+есть автобус, надо посчитать сколько останется пассажиров после 
+последней остановки
+*/
+function example8() {
+    const bus = [ [10, 0], [5, 3], [1, 5] ]; // 8
+    let count = 0;
+
+    for(let i = 0; i < bus.length; i++ ) {
+      count = count + bus[i][0] - bus[i][1];
+    }
+    console.log(count);
+}
+example8();
+
+/* 
+тоже самое но - с помощью массива объекта
+*/
+function example9() {
+    const bus1 = [ 
+      {in: 10, out: 0},
+      {in: 5, out: 3},
+      {in: 1, out: 7},
+    ]; // 6
+    let count1 = 0;
+
+    for(let i = 0; i < bus1.length; i++ ) {
+    	count1 = count1 + bus1[i].in - bus1[i].out;
+    }
+    console.log(count1);
+}
+example9();
