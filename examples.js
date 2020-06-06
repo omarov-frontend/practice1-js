@@ -139,11 +139,11 @@ function example9() {
       {in: 5, out: 3},
       {in: 1, out: 7},
     ]; // 6
-    let count1 = 0;
+    let resultCount = 0;
 
     for(let i = 0; i < bus1.length; i++ ) {
-    	count1 = count1 + bus1[i].in - bus1[i].out;
+    	resultCount = resultCount + bus1[i].in - bus1[i].out;
     }
-    console.log(count1);
+    console.log(resultCount);
 }
 example9();
