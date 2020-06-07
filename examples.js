@@ -109,10 +109,10 @@ example6();
  */
 function example7() {
     const arr = [1, 2, 3, 4, 5, 6, 7];
-    let sumOfFirstAndLast = arr[0] + arr[arr.length - 1]; 
-    console.log(sumOfFirstAndLast);
+    return arr[0] + arr[arr.length - 1]; 
+    return sumOfFirstAndLast;
 }
-example7();
+console.log(example7());
 
 
 /* 
@@ -126,9 +126,9 @@ function example8() {
     for(let i = 0; i < bus.length; i++ ) {
       count = count + bus[i][0] - bus[i][1];
     }
-    console.log(count);
+    return count;
 }
-example8();
+console.log(example8());
 
 /* 
 тоже самое но - с помощью массива объекта
@@ -144,6 +144,6 @@ function example9() {
     for(let i = 0; i < bus1.length; i++ ) {
     	resultCount = resultCount + bus1[i].in - bus1[i].out;
     }
-    console.log(resultCount);
+    return resultCount;
 }
-example9();
+console.log(example9());
