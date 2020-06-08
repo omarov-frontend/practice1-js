@@ -110,7 +110,6 @@ example6();
 function example7() {
     const arr = [1, 2, 3, 4, 5, 6, 7];
     return arr[0] + arr[arr.length - 1]; 
-    return sumOfFirstAndLast;
 }
 console.log(example7());
 
