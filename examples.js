@@ -149,18 +149,18 @@ console.log(example9());
 
 
 /*
-Получить ф-ю которая принимает диапазон чисел, и надо найти в этом диапазоне палиндром чисел, палиндром - это когда 
+Написать ф-ю которая принимает диапазон чисел, и надо найти в этом диапазоне палиндром чисел, палиндром - это когда 
 и слева и справа читается одинаково
 */
 function example10_allPalindromes(a, b) {
-    let num = [];
+    let numbers = [];
     for(let x = a; x <= b; x++) {
-      let reverse = +(x + '').split('').reverse().join(''); //плюс впереди это чтоб перевести всю строку в число, (x + '') - сделали строку числом, split - преобразовывает строку в массив, join - соединяет в строку
-      if(x === reverse) {
-        num.push(x);
+      const reverse = +(x + '').split('').reverse().join(''); //плюс впереди это чтоб перевести всю строку в число, (x + '') - сделали строку числом, split - преобразовывает строку в массив, join - соединяет в строку
+      if(x === reverse && x.length > 1) {
+        numbers.push(x);
       }
     }
-    return num;
+    return numbers;
 }
 console.log(example10_allPalindromes(8, 34));       // [8,9,11,22,33]
 console.log(example10_allPalindromes(1550, 1766));  // [1551]
@@ -171,15 +171,14 @@ console.log(example10_allPalindromes(1550, 1766));  // [1551]
 гласной, если с согласной, то написать что нач-ся с согласной, а если есть пробел, то написать что имя неправильное!
 */
 function example11_checkForVowel(name) {
-    if(name.includes(' ')) {
+    const vowels = ['a', 'e', 'o', 'u', 'i'];
+    if(name[0].includes(' ')) {
       return 'Space in name';
     } 
-    if('aeoui'.includes(name[0].toLowerCase())) {
+    if(vowels[0].includes(name[0].toLowerCase())) {
       return 'Your name starts with vowel';
     }
-    else {
       return 'Your name starts with consonant';
-    }
   }
 console.log(example11_checkForVowel('Alice'));
 console.log(example11_checkForVowel('Linda'));
